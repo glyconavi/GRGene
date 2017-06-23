@@ -1,0 +1,9 @@
+select distinct ?id ?label
+from <http://glyconavi.org/database/grgene>
+where {
+?s <http://purl.org/dc/terms/identifier> ?id .
+?s <http://glyconavi.org/glycobio/grgene/approvedSymbol> ?approvedSymbol .
+?approvedSymbol <http://www.w3.org/2000/01/rdf-schema#label> ?label .
+VALUES ?label { "WBSCR17" "CALR" }
+}
+order by ?label
