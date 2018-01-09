@@ -24,7 +24,7 @@ if(file_exists($directory_path)){
     }
 }
 
-ここから以下はまだなにもやってない
+// ここから以下はまだなにもやってない
 
 //$fileHeader = date("Y-m-d");
 $savepath = $directory_path.DIRECTORY_SEPARATOR."GlycoNAVI-GRGene_".$timeHeader.".ttl";
