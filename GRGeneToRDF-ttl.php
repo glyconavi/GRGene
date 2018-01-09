@@ -106,20 +106,20 @@ foreach($gssamplearray as $file) {
                 
                     // GRGene_ID
                     if ($hed_string[0] == $hed[0]) {
-                        $DataString .= "grg:Dataset\tgrg:has_resource\tgrg:".$datas[0].".\n";
-                        $DataString .= "grg:".$datas[0]."\tdcterms:identifier\t\"".$datas[0]."\".\n";
-                        $DataString .= "grg:".$datas[0]."\trdf:type\tgrg:Gene.\n";
-                        $DataString .= "grg:".$datas[0]."\trdfs:label\t\"".$datas[0]." of GRGene\".\n";
+                        $DataString .= "grg:Dataset\tgrg:has_resource\tgrg:".urlencode($datas[0]).".\n";
+                        $DataString .= "grg:".urlencode($datas[0])."\tdcterms:identifier\t\"".$datas[0]."\".\n";
+                        $DataString .= "grg:".urlencode($datas[0])."\trdf:type\tgrg:Gene.\n";
+                        $DataString .= "grg:".urlencode($datas[0])."\trdfs:label\t\"".$datas[0]." of GRGene\".\n";
                     }
                     // HGNC ID
                     else if ($hed_string[1] == $hed[1]) {
-                        $DataString .= "grg:".$datas[0]."\trdfs:seeAlso\t<http://identifiers.org/hgnc/".$datas[1].">.\n";
+                        $DataString .= "grg:".urlencode($datas[0])."\trdfs:seeAlso\t<http://identifiers.org/hgnc/".urlencode($datas[1]).">.\n";
                     }
                     // Approved Symbol
                     else if ($hed_string[2] == $hed[2]) {
-                        $DataString .= "grg:".$datas[0]."\tgrg:approvedSymbol\tgrg:".$datas[2]." .\n";
-                        $DataString .= "grg:".$datas[2]."\trdfs:type\tgrg:ApprovedSymbol .\n";
-                        $DataString .= "\tgrg:".$datas[2]."\trdfs:label\t\"".$datas[2]."\".\n";
+                        $DataString .= "grg:".urlencode($datas[0])."\tgrg:approvedSymbol\tgrg:".urlencode($datas[2])." .\n";
+                        $DataString .= "grg:".urlencode($datas[2])."\trdfs:type\tgrg:ApprovedSymbol .\n";
+                        $DataString .= "\tgrg:".urlencode($datas[2])."\trdfs:label\t\"".$datas[2]."\".\n";
                     }
 
 
