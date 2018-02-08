@@ -8,6 +8,9 @@
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix edam:  <http://edamontology.org/> .
 
+grg:Dataset	rdf:type <http://semanticscience.org/resource/SIO_000089> .
+grg:Dataset	rdfs:label	"Glycan Related Gene" .
+
 grg:Dataset	grg:has_resource	grg:GRG_1.
 grg:GRG_1	dcterms:identifier	"GRG_1".
 grg:GRG_1	rdf:type	up:Gene.
